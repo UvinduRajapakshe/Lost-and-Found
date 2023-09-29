@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lost and Found - Add Listening</title>
+</head>
+<body>
+    <h1>Lost and Found Posting</h1>
+    <form action="post_handler.php" method="post" enctype="multipart/form-data">
+        <label for="item_type">Item Type:</label>
+        <select name="item_type" id="item_type">
+            <option value="lost">Lost Item</option>
+            <option value="found">Found Item</option>
+        </select><br>
+
+        <label for="name">Name:</label>
+        <input type="text" name="name" required><br>
+
+        <label for="location">Location:</label>
+        <input type="text" name="location" required><br>
+
+        <label for="description">Description:</label>
+        <textarea name="description" required></textarea><br>
+
+        <label for="contact_details">Contact Details:</label>
+        <input type="text" name="contact_details" required><br>
+
+        <label for="image">Image:</label>
+        <input type="file" name="image" accept="image/*"><br>
+
+        <input type="submit" value="Submit">
+    </form>
+</body>
+
+<style>
+
+body {
+    background-color: #f2f2f2;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    text-align: center;
+}
+
+form {
+    width: 50%;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+form label {
+    display: inline-block;
+    width: 150px;
+}
+
+form input[type=text], form textarea {
+    width: 300px;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+}
+
+form input[type=submit] {
+    width: 100px;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+form input[type=submit]:hover {
+    background-color: #ccc;
+}
+
+form input[type=file] {
+    margin-bottom: 10px;
+}
+
+form select {
+    width: 300px;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+}
+
+</style>
+</html>
